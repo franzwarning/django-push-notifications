@@ -79,7 +79,7 @@ def _apns_send(
 		except ValueError:
 			raise APNSUnsupportedPriority("Unsupported priority %d" % (priority))
 
-    notification_kwargs["collapse_id"] = kwargs.pop("collapse_id", None)
+	notification_kwargs["collapse_id"] = kwargs.pop("collapse_id", None)
 
 	if batch:
 		data = [apns2_client.Notification(
